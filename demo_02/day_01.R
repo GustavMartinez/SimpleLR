@@ -10,7 +10,9 @@ mod <- lm(df$consumption ~ df$income) # lm(dependent var [y] ~ independent var) 
 
 summary(mod)
 
-attributes(mod) # To see the attributes of the model and extract if necessary
+attributes(mod) # To see the attributes of the model and extract if necessary. Example:
+
+mod$coefficients #See the coefficients
 
 abline(mod, col='red', lwd=3) # to see the regression line
 
