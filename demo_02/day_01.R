@@ -1,4 +1,4 @@
-df <- read.csv(file.choose(), header = T)
+df <- read.csv(file.choose(), header = T) #import data
 
 plot(df$income, df$consumption, main="Scatterplot")
 
