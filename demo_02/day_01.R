@@ -1,6 +1,8 @@
 df <- read.csv(file.choose(), header = T) #import data
 
-plot(df$income, df$consumption, main="Scatterplot") #scatterplot graph
+attach(df) #attach the dataframe
+
+plot(income, consumption, main="Scatterplot") #scatterplot graph
 
 cor(df$income, df$consumption) #Pearson's correlation
 
