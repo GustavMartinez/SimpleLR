@@ -25,7 +25,7 @@ confint(mod, level=0.95) #To change the confidence interval
 new_values <- data.frame(income = c(150,130,125)) # Valores x para predecir
 
 point_predictions <- predict(mod, newdata = new_values) # Crear las predicciones con el modelo y los nuevos datos
-print(point_predictions
+print(point_predictions)
 
 #Predicciones con intervalos de confianza
 prediction_with_ci <- predict(mod, newdata = new_values, interval = "confidence", level=0.95)
