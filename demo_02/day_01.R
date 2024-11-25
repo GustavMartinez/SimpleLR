@@ -29,3 +29,13 @@ print(point_predictions)
 
 #Predicciones con intervalos de confianza
 prediction_with_ci <- predict(mod, newdata = new_values, interval = "confidence", level=0.95)
+
+print(prediction_with_ci)
+
+plot(df$income, df$consumption, 
+     main = "Scatterplot", 
+     xlim = range(c(df$income, new_values$income)), 
+     ylim = range(c(df$consumption, point_predictions)))
+
+
+points(new_values$income, point_predictions, col='blue', pch=16, cex=1.5)
