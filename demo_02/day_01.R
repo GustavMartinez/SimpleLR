@@ -4,7 +4,7 @@ attach(df) #attach the dataframe
 
 plot(income, consumption, main="Scatterplot") #scatterplot graph
 
-cor(df$income, df$consumption) #Pearson's correlation
+cor(income, consumption) #Pearson's correlation
 
 help(lm) # to see the description
 
