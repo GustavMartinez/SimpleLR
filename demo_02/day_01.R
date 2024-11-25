@@ -19,3 +19,5 @@ abline(mod, col='red', lwd=3) # to see the regression line
 confint(mod) #To see the confidence interval 95 - 99% or whatever
 
 confint(mod, level=0.95) #To change the confidence interval
+
+new_values <- data.frame(df.income = c(150,130,125)) # Valores x para predecir
