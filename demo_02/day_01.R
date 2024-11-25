@@ -6,7 +6,7 @@ cor(df$income, df$consumption) #Pearson's correlation
 
 help(lm) # to see the description
 
-mod <- lm(df$consumption ~ df$income) # lm(dependent var [y] ~ independent var) [x]
+mod <- lm(df$consumption ~ df$income) # lm(dependent var [y] ~ independent var) [x], lm == linear model
 
 summary(mod)
 
