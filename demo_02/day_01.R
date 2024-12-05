@@ -39,3 +39,42 @@ plot(df$income, df$consumption,
 
 
 points(new_values$income, point_predictions, col='blue', pch=16, cex=1.5)
+
+
+
+# SUPUESTOS
+
+
+### 1. Linealidad
+
+residual.values <- residuals(mod)
+predicted.values <- fitted(mod)
+
+plot(predicted.values, residual.values,
+     xlab="Predicted values",
+     ylab="Residuals")
+abline(h=0, col='red')
+
+
+### 2. Normalidad de los residuos
+
+resid <- resid(mod)
+qqnorm(resid)
+qqline(resid)
+
+
+### 3. Homocedasticidad
+
+plot(predicted.values, abs(residual.values),
+     xlab = "Predicted values",
+     ylab = "Absolute Residuals",
+     main = "Homoscedasticity check")
+abline(h = 0, col = "blue")
+
+
+### 4. Independencia de los residuos (Durbin-Watson test)
+
+library(lmtest)
+dwtest(mod)  # Verifica el resultado estadístico
+
+
